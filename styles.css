@@ -154,6 +154,19 @@ nav a {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.mail::before,
+.tel::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+.mail::before {
+  background-image: url("./images/header/mail.svg");
+}
+.tel::before {
+  background-image: url("./images/header/tel.svg");
+}
 .logo-web {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -165,10 +178,17 @@ nav a {
 .hero {
   flex-direction: column;
   align-items: center;
-  background-color: var(--dark-grey);
   color: var(--white);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("./images/main_page/hero.jpg");
+  background-position: center;
+  background-size: contain;
 }
 
 .hero-content {
@@ -246,6 +266,7 @@ nav a {
 /* section team */
 .team {
   background-color: #f5f4fa;
+  padding-bottom: 94px;
 }
 .team ul {
   display: flex;
@@ -280,7 +301,23 @@ nav a {
   text-align: center;
   color: var(--texr-p);
 }
+/* clients*/
+.clients-list {
+  display: flex;
+}
+.clients-list li {
+  margin-right: 30px;
+}
+.clients-list li:last-child {
+  margin-right: 0px;
+}
+.clients-list a {
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
 
+/* end clients */
 /* end section team */
 /* end main */
 /* footer */
