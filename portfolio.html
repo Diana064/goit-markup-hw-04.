@@ -25,14 +25,30 @@
             ><span class="web">Web</span>Studio</a
           >
           <ul class="nav-list">
-            <li><a href="./index.html">Студия</a></li>
+            <!--Begin nav-list-->
+            <li><a href="./index.html" >Студия</a></li>
             <li><a href="./portfolio.html" class="active">Портфолио</a></li>
             <li><a href="">Контакты</a></li>
+            <!--End nav-list-->
           </ul>
         </nav>
         <ul class="kontakt-list">
-          <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
-          <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li>
+            <a href="mailto:info@devstudio.com">
+              <svg class="mail" width="16" height="10">
+                <use href="./images/svg/symbol-defs.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:+380961111111">
+              <svg class="tel" width="10" height="16">
+                <use href="./images/svg/symbol-defs.svg#icon-tel"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
         </ul>
       </div>
       <!--End header-->
@@ -192,7 +208,7 @@
     </main>
     <footer>
       <!--Begin -->
-      <div class="footer container">
+      <div class="footer container footer-block">
         <!--Begin footer-text-->
         <div class="footer-text">
           <a class="footer-logo logo-web" href=""
@@ -201,12 +217,44 @@
           <address>
             <p>г. Киев, пр-т Леси Украинки, 26</p>
             <!--Begin footer-info-->
-            <div class="footer-info">
-              <a href="tel:+380961111111">+38 096 111 11 11</a>
-              <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </div>
+            <ul class="footer-info">
+              <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+              <li> <a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
             <!--End footer-info-->
           </address>
+        </div>
+        <div class="footer-links">
+          <h3>присоединяйтесь</h3>
+          <ul class="links">
+                <li>
+                  <a href=''>
+                  <svg class="team-icon">
+                    <use href='./images/svg/symbol-defs.svg#icon-inst'></use>
+                  </svg>
+                </a>
+              </li>
+                <li>
+                  <a href=''>
+                  <svg class="team-icon">
+                    <use href='./images/svg/symbol-defs.svg#icon-twitter'></use>
+                  </svg>
+                </a>
+              </li>
+                <li>
+                  <a href=''>
+                  <svg class="team-icon">
+                    <use href='./images/svg/symbol-defs.svg#icon-face'></use>
+                  </svg>
+                </a>
+              </li>
+                <li>
+                  <a href=''>
+                  <svg class="team-icon">
+                    <use href='./images/svg/symbol-defs.svg#icon-link'></use>
+                  </svg>
+                </a>
+              </li>
+              </ul>
         </div>
         <!--End footer-text-->
       </div>
