@@ -177,8 +177,10 @@ nav a {
 /* main */
 /* section hero */
 .hero {
+  max-width: 1600px;
   flex-direction: column;
   align-items: center;
+
   color: var(--white);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -190,6 +192,7 @@ nav a {
     url("./images/main_page/hero.jpg");
   background-position: center;
   background-size: contain;
+  margin: 0 auto;
 }
 
 .hero-content {
@@ -250,9 +253,10 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 100px;
   background-color: var(--portfolio-button);
   margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
 }
 .quality-icon {
   width: 70px;
@@ -318,7 +322,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-top: 16px;
 }
 .team-link li {
   margin-right: 10px;
@@ -330,10 +334,10 @@ nav a {
   display: flex;
   width: 44px;
   height: 44px;
-  padding: 12px;
+  align-items: center;
+  justify-content: center;
 }
 .team-link svg {
-  background-color: transparent;
   width: 20px;
   height: 20px;
   fill: var(--clients-icon);
@@ -364,20 +368,22 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  width: 170px;
+  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 .clients-list svg {
-  height: 92px;
-  width: 170px;
-  padding: 16px 32px;
+  height: 60px;
+  width: 106px;
   fill: var(--clients-icon);
 }
-
-.clients-list svg:hover,
-.clients-list svg:focus {
+.clients-list a:hover,
+.clients-list a:focus {
   border: 1px solid var(--blue);
+}
+.clients-list a:hover .clients-icon,
+.clients-list a:focus .clients-icon {
   fill: var(--blue);
 }
 
@@ -391,6 +397,7 @@ footer {
 }
 .footer-block {
   display: flex;
+  align-items: baseline;
 }
 .footer-links {
   margin-left: 70px;
@@ -403,7 +410,6 @@ footer {
   letter-spacing: 0.03em;
   font-weight: bold;
   margin-bottom: 30px;
-  margin-top: 12px;
 }
 .links {
   display: flex;
@@ -421,7 +427,8 @@ footer {
   display: flex;
   width: 44px;
   height: 44px;
-  padding: 12px;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
@@ -524,7 +531,8 @@ address a:last-child {
 .portfolio-img a {
   text-decoration: none;
 }
-.portfolio-img li:hover {
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
