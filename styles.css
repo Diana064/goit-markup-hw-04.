@@ -1,7 +1,6 @@
 :root {
   --text-color: #212121;
   --blue: #2196f3;
-  --background-blue: rgba(33, 150, 243, 0.9);
   --white: #ffffff;
   /* --lite-grey: #e5e5e5; */
   --dark-grey: #2f303a;
@@ -10,8 +9,6 @@
   --portfolio-pages: #eeeeee;
   --portfolio-button: #f5f4fa;
   --clients-icon: #afb1b8;
-  --time-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --time: 250ms;
 }
 body {
   font-family: "Raleway", sans-serif;
@@ -91,14 +88,6 @@ button {
 .active {
   color: var(--blue);
 }
-.active.nav-item::after {
-  width: 100%;
-}
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
 /* main page */
 /* .header  */
 header {
@@ -136,34 +125,16 @@ nav a {
 .nav-list li:last-child {
   margin-right: 0px;
 }
-.nav-item {
-  position: relative;
+.nav-list a {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
   display: block;
-  transition: fill var(--time) var(--time-cubic),
-    color var(--time) var(--time-cubic);
 }
-.nav-item::after {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 4px;
-  background-color: var(--blue);
-  content: "";
-  transition: width var(--time) var(--time-cubic);
-}
-
-.nav-item:hover::after {
-  width: 100%;
-}
-.nav0item:hover,
-.nav-item:focus,
+.nav-list a:hover,
+.nav-list a:focus,
 .kontakt-list a:hover,
 .kontakt-list a:focus,
 .kontakt-list svg:hover,
@@ -193,8 +164,6 @@ nav a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
-  transition: fill var(--time) var(--time-cubic),
-    color var(--time) var(--time-cubic);
 }
 .kontakt-list svg {
   margin-right: 10px;
@@ -233,7 +202,7 @@ nav a {
   max-width: 696px;
   margin: 0 auto 30px auto;
 }
-.hero-btn {
+.hero button {
   border: none;
   padding: 10px 32px;
   justify-content: center;
@@ -245,71 +214,10 @@ nav a {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white);
-  transition: background-color var(--time) var(--time-cubic);
 }
-.hero-btn:hover {
+.hero button:hover {
   background-color: #188ce8;
 }
-/* modal */
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 100;
-}
-.modal-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
-  background-color: var(--white);
-  border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  animation-name: visible-modal;
-  animation-duration: 2500ms;
-  animation-timing-function: linear;
-
-  /* transition: opacity var(--time) cubic-bezier(0.4, 0, 0.2, 1),
-    transform var(--time) cubic-bezier(0.4, 0, 0.2, 1); */
-}
-@keyframes visible-modal {
-  0% {
-    opacity: 0;
-    transform: scale(0.2);
-  }
-
-  50% {
-    opacity: 0.5;
-    /* transform: scale(0.5); */
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    opacity: 1;
-    /* transform: scale(1); */
-
-    transform: translate(-50%, -50%);
-  }
-}
-
-.modal-btn {
-  margin: 10px;
-  border-radius: 50%;
-  padding: 15px 20px;
-  border: none;
-  justify-content: center;
-  background-color: var(--blue);
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  color: var(--white);
-}
-/* end modal */
 
 /* end section hero */
 /* section quality */
@@ -364,42 +272,13 @@ nav a {
 .work ul {
   display: flex;
 }
-.work-link {
-  position: relative;
+.work li {
   list-style: none;
   margin-right: 30px;
 }
-.work-link:last-child {
+.work li:last-child {
   margin-right: 0;
 }
-.work-link::after {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-.work-first.work-link::after {
-  content: "Десктопные приложения";
-}
-.work-second.work-link::after {
-  content: "Мобильные приложения";
-}
-.work-third.work-link::after {
-  content: "Дизайнерские решения";
-}
-
 /* end section work */
 /* section team */
 .team {
@@ -457,9 +336,6 @@ nav a {
   height: 44px;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--time) var(--time-cubic),
-    fill var(--time) var(--time-cubic),
-    border-radius var(--time) var(--time-cubic);
 }
 .team-link svg {
   width: 20px;
@@ -475,7 +351,6 @@ nav a {
 .team-link a:focus .team-icon {
   fill: var(--white);
 }
-/* end section team */
 /* clients*/
 .clients-list {
   display: flex;
@@ -489,9 +364,6 @@ nav a {
 .clients-list li:last-child {
   margin-right: 0px;
 }
-.clients-icon {
-  transition: fill var(--time) var(--time-cubic);
-}
 .clients-list a {
   display: flex;
   align-items: center;
@@ -500,7 +372,6 @@ nav a {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: border var(--time) var(--time-cubic);
 }
 .clients-list svg {
   height: 60px;
@@ -517,7 +388,7 @@ nav a {
 }
 
 /* end clients */
-
+/* end section team */
 /* end main */
 /* footer */
 footer {
@@ -559,8 +430,6 @@ footer {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: background-color var(--time) var(--time-cubic),
-    fill var(--time) var(--time-cubic);
 }
 .links svg {
   background-color: transparent;
@@ -706,33 +575,5 @@ address a:last-child {
   letter-spacing: 0.03em;
   color: var(--texr-p);
 }
-.overlay-box {
-  width: 370px;
-  height: 294px;
-  position: relative;
-  overflow: hidden;
-}
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-blue);
-  transform: translateY(0%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* transform: translateY 2500ms var(--time-cubic); */
-}
-.overlay-text {
-  font-family: "Roboto";
-  font-size: 18px;
-  line-height: 28px;
-  color: white;
-  letter-spacing: 0.03em;
-  padding: 63px 24px;
-}
-.portfolio-link:hover .overlay {
-  transform: translateY(-100%);
-}
-
 /* end section portfolio */
-/* end portfolio page  */
+/* end portfolio page  */ ;
